@@ -1,5 +1,5 @@
 const readlineSync = require("readline-sync");
-let num = new Number(readlineSync.question('What is your favorite number ?'));
+let num = new Number(readlineSync.question('What is your number ?'));
 if ((num == 1) || (num <= 7)) {
     if (num == 1) {
         console.log("Monday");
