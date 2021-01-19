@@ -1,0 +1,11 @@
+const readlineSync = require("readline-sync");
+let cpt = 0;
+cpt = cpt + 1;
+let name = readlineSync.question('Question ' + cpt + '/4 ' + 'Give me your name please?');
+cpt = cpt + 1;
+let firstName = readlineSync.question('Question ' + cpt + '/4 ' + 'Give me your firstname please?');
+cpt = cpt + 1;
+let city = readlineSync.question('Question ' + cpt + '/4 ' + 'Give me your city please?');
+cpt = cpt + 1;
+let job = readlineSync.question('Question ' + cpt + '/4 ' + 'Give me your futur job?');
+console.log("Once upon a time in " + city + ", " + firstName + " " + name + " learn HTML, CSS, JS and PHP code to become " + job + ".");
