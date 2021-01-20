@@ -2,14 +2,15 @@ const readlineSync = require("readline-sync");
 
 let n = new Number(readlineSync.question('Please enter a number : '));
 let a = 0;
+let table = multiRand();
 
-let finalTab = new Array;
 
 function rand10(min, max) {
     return 1 + Math.floor(Math.random() * 10);
 }
 
-function multiRand(n) {
+function multiRand() {
+    let finalTab = new Array;
     for (let j = 0; j < n; j++) {
         result = rand10(1, 10);
         finalTab.push(result);
@@ -17,24 +18,26 @@ function multiRand(n) {
     return finalTab;
 }
 
-function min(n) {
-    minNumber = Math.min.apply(null, finalTab);
+function min(table) {
+    minNumber = (Math.min(...table));
     return minNumber;
 }
 
-function max(n) {
-    maxNumber = Math.max.apply(null, finalTab);
+function max(table) {
+    maxNumber = (Math.max(...table));
     return maxNumber;
 }
 
-function average(n) { //Syntaxe bonne mais ne fonctionne pas !! "k" is not defined
-    for (let k = 0; k < finalTab.length; k++); {
-        a = new Number(a + finalTab[k]);
-        moy = a / finalTab.length;
+function average(table) { //Syntaxe bonne mais ne fonctionne pas !! "k" is not defined
+    let moy = 0;
+    for (let k = 0; k < table.length; k++) {
+        a = new Number(a + table[k]);
+        moy = a / table.length;
     }
     return moy;
 }
-console.log(finalTab);
-console.log("le minimum est: " + min(finalTab));
-console.log("le maximum est: " + max(finalTab));
-console.log("la moyenne est: " + average(finalTab));
+
+console.log(table);
+console.log("le minimum est: " + min(table));
+console.log("le maximum est: " + max(table));
+console.log("la moyenne est: " + average(table));
