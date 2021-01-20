@@ -28,7 +28,7 @@ function max(table) {
     return maxNumber;
 }
 
-function average(table) { //Syntaxe bonne mais ne fonctionne pas !! "k" is not defined
+function average(table) {
     let moy = 0;
     for (let k = 0; k < table.length; k++) {
         a = new Number(a + table[k]);
