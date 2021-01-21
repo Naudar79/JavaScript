@@ -5,9 +5,11 @@ let choix = '';
 function askTvSeries() {
     sondage.name = readlineSync.question('Entrez le nom de votre serie :');
     sondage.year = new Number(readlineSync.question('Entrez la date de votre serie :'));
-    //do {              !!!! Finir la boucle + alimenter le tableau
-    sondage.cast = readlineSync.question('Entrez le nom de votre acteur. faites Q pour arrêter la liste :');
-    //} while ((choix != "q") || (choix != "Q"));
+    while (choix != '**') {
+        choix = readlineSync.question('Entrez le nom de votre acteur. faites ** pour arrêter la liste :');
+        sondage.cast.push(choix);
+    }
+
     return sondage;
 }
-console.log(askTvSeries());
+console.log(JSON.stringify(askTvSeries()));
