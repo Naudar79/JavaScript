@@ -38,6 +38,6 @@ function average(table) {
 }
 
 console.log(table);
-console.log("le minimum est: " + min(table));
-console.log("le maximum est: " + max(table));
-console.log("la moyenne est: " + average(table));
+console.log("Minimum is: " + min(table));
+console.log("Maximum is: " + max(table));
+console.log("Average is: " + average(table));
