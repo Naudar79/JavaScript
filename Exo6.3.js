@@ -1,3 +1,5 @@
+let rectC = '';
+
 class Rectangle {
     constructor(topLeftXPos, topLeftYPos, width, length) {
         this.topLeftXPos = topLeftXPos;
@@ -17,7 +19,20 @@ class Rectangle {
     }
 }
 
-let RectangleA = new Rectangle(1, 1, 3, 5);
-let RectangleB = new Rectangle(3, 3, 3, 6);
+function Rand(k, j) { // Générer la surface du rectangle
+    let rndNb = k + Math.floor(Math.random() * j);
+    return rndNb;
+}
 
-console.log(RectangleA.collides(RectangleB));
+while (l <= 1000) {
+    RectC = new Rectangle(
+        Math.floor(Math.random() * 50) + 1,
+        Math.floor(Math.random() * 50) + 1,
+        Math.floor(Math.random() * 50) + 1,
+        Math.floor(Math.random() * 50) + 1
+    );
+}
+
+for (let i = 0; i <= 1000; i++) { // Générer les 1000 rectangles
+
+}
